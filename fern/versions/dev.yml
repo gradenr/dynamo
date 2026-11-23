@@ -218,9 +218,11 @@ navigation:
         contents:
           - page: Overview
             path: ../pages-dev/kubernetes/auto-deployment/overview.mdx
-          - page: Auto Deploy with DGDR
+          - page: Auto Deploy with DGDR v1beta1
             slug: dgdr-walkthrough
             path: ../pages-dev/kubernetes/auto-deployment/auto-deploy-with-dgdr.md
+          - page: Search with DGDR v1beta2
+            path: ../pages-dev/kubernetes/auto-deployment/dgdr-v1beta2.md
           - page: Dynamo Profiler
             path: ../pages-dev/kubernetes/auto-deployment/dynamo-profiler.md
           - page: Dynamo Planner
@@ -724,6 +726,18 @@ navigation:
                 path: ../pages-dev/use-cases/reinforcement-learning/implementation-guide.md
               - page: RL Integration Reference
                 path: ../pages-dev/use-cases/reinforcement-learning/integration-reference.md
+      # ==================== Decision Model ====================
+      - section: Decision Model
+        slug: decision-model
+        collapsed: true
+        icon: list-check
+        contents:
+          - page: APIs
+            slug: apis
+            path: ../pages-dev/use-cases/decision-model/apis.md
+          - page: SGLang
+            slug: sglang
+            path: ../pages-dev/use-cases/decision-model/sglang.md
       # ==================== Agents ====================
       - section: Agents
         collapsed: true
@@ -963,6 +977,9 @@ navigation:
             skip-slug: true
             collapsed: true
             contents:
+              - page: Inkling 2 Mini
+                path: ../pages-dev/recipes/model-recipes/inkling-2-mini.mdx
+                slug: inkling-2-mini
               - page: Inkling NVFP4
                 path: ../pages-dev/recipes/model-recipes/inkling-nvfp4.mdx
                 slug: inkling
@@ -1271,6 +1288,10 @@ navigation:
         icon: image
         path: ../pages-dev/reference/api/image-edits.mdx
         slug: api/image-edits
+      - page: Decision APIs
+        icon: list-check
+        path: ../pages-dev/reference/api/decision-apis.md
+        slug: api/decisions
       - section: Components
         icon: sliders
         slug: components
@@ -1292,8 +1313,6 @@ navigation:
             path: ../pages-dev/reference/components/planner-configuration.mdx
           - page: Profiler Configuration
             path: ../pages-dev/reference/components/profiler-configuration.mdx
-          - page: KVBM Configuration
-            path: ../pages-dev/reference/components/kvbm-configuration.mdx
           - page: Mocker CLI Reference
             path: ../pages-dev/reference/components/mocker-cli-reference.mdx
           - page: DynoSim Replay CLI Reference
@@ -1334,6 +1353,8 @@ navigation:
             path: ../pages-dev/reference/observability/forward-pass-metrics-traces.mdx
           - page: Request Traces
             path: ../pages-dev/reference/observability/request-traces.mdx
+          - page: NVTX Profiling
+            path: ../pages-dev/reference/observability/nvtx-profiling.md
           - page: Environment Variables
             path: ../pages-dev/reference/observability/environment-variables.mdx
           - page: Metrics Catalog
@@ -1406,6 +1427,12 @@ navigation:
         contents:
           # Keep this archive in reverse chronological order. Publication dates are
           # rendered in each article header and on the custom landing page.
+          - page: "Build Tool-Calling Parsers in Rust with AI Agents"
+            path: ../pages-dev/blog/2026/build-tool-calling-parsers-in-rust-with-ai-agents.mdx
+            slug: build-tool-calling-parsers-in-rust-with-ai-agents
+          - page: "Planner Retune"
+            path: ../pages-dev/blog/2026/planner-retune.mdx
+            slug: planner-retune
           - page: "AIPerf Benchmarking"
             path: ../pages-dev/blog/2026/aiperf-benchmarking.mdx
             slug: aiperf-benchmarking

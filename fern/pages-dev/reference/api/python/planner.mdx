@@ -420,7 +420,7 @@ Planner search-space preparation and replay-spec materialization.
 from dynamo.planner.simulation import DynamoPlannerSweepConfigProvider
 ```
 
-[`components/src/dynamo/planner/simulation/provider.py#L826`](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/simulation/provider.py#L826)
+[`components/src/dynamo/planner/simulation/provider.py#L823`](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/simulation/provider.py#L823)
 
 **Public methods**
 
@@ -432,7 +432,7 @@ compile_prediction(config: Mapping[str, JSONValue], context: PredictionAdapterCo
 
 No summary available.
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/simulation/provider.py#L836)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/simulation/provider.py#L833)
 
 <h4 id="api-dynamo-planner-simulation-provider-dynamoplannersweepconfigprovider-compile-recommendation">compile_recommendation</h4>
 
@@ -442,7 +442,7 @@ compile_recommendation(config: Mapping[str, JSONValue], context: RecommendationA
 
 No summary available.
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/simulation/provider.py#L891)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/simulation/provider.py#L888)
 
 <h4 id="api-dynamo-planner-simulation-provider-dynamoplannersweepconfigprovider-materialize-candidate">materialize_candidate</h4>
 
@@ -452,7 +452,7 @@ materialize_candidate(plan: AdapterSearchPlan, selection: Mapping[str, JSONValue
 
 No summary available.
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/simulation/provider.py#L1051)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/simulation/provider.py#L1048)
 
 <h4 id="api-dynamo-planner-simulation-provider-dynamoplannersweepconfigprovider-generate-search-space">generate_search_space</h4>
 
@@ -462,7 +462,7 @@ generate_search_space(search_spec: Mapping[str, JSONValue], context: SweepContex
 
 No summary available.
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/simulation/provider.py#L1082)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/simulation/provider.py#L1079)
 
 <h4 id="api-dynamo-planner-simulation-provider-dynamoplannersweepconfigprovider-materialize-replay">materialize_replay</h4>
 
@@ -472,7 +472,7 @@ materialize_replay(plan: AdapterSearchPlan, selection: Mapping[str, JSONValue], 
 
 No summary available.
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/simulation/provider.py#L1201)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/simulation/provider.py#L1198)
 </Accordion>
 
 <Accordion id="api-dynamo-planner-errors-emptytargetreplicaserror" title="EmptyTargetReplicasError (class)">
@@ -597,7 +597,7 @@ This connector wraps RemotePlannerClient and implements the InfraScaler
 interface, allowing planner_core.py to treat global-planner environment mode
 consistently with kubernetes and virtual modes.
 
-[`components/src/dynamo/planner/connectors/global_planner.py#L53`](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L53)
+[`components/src/dynamo/planner/connectors/global_planner.py#L54`](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L54)
 
 **Public methods**
 
@@ -631,7 +631,7 @@ GlobalPlanner runs managed allocation; poll its
 allocation status alongside worker observations
 </ParamField>
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L62)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L63)
 
 <h4 id="api-dynamo-planner-connectors-global-planner-globalplannerconnector-async-init">async_init</h4>
 
@@ -641,7 +641,7 @@ async_init()
 
 Async initialization - creates RemotePlannerClient
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L105)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L106)
 
 <h4 id="api-dynamo-planner-connectors-global-planner-globalplannerconnector-set-predicted-load">set_predicted_load</h4>
 
@@ -653,7 +653,7 @@ Set predicted load for inclusion in next scale request.
 
 This is called by planner_core.py before calling set_component_replicas.
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L116)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L117)
 
 <h4 id="api-dynamo-planner-connectors-global-planner-globalplannerconnector-set-component-replicas">set_component_replicas</h4>
 
@@ -679,7 +679,7 @@ Whether to wait for scaling completion (passed to GlobalPlanner)
 - `EmptyTargetReplicasError` — If target_replicas is empty
 - `RuntimeError` — If remote_client is not initialized or the response indicates a hard error (e.g., authorization denied, K8s exception). A REJECTED response is NOT raised — it is logged as a warning and treated as a no-op for this tick.
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L130)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L131)
 
 <h4 id="api-dynamo-planner-connectors-global-planner-globalplannerconnector-get-allocation-status">get_allocation_status</h4>
 
@@ -689,7 +689,7 @@ get_allocation_status() -> Optional[ManagedAllocationStatus]
 
 Refresh the controller's grant and transfer state without changing demand.
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L220)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L221)
 
 <h4 id="api-dynamo-planner-connectors-global-planner-globalplannerconnector-add-component">add_component</h4>
 
@@ -701,7 +701,7 @@ Add a component (not supported for GlobalPlanner).
 
 GlobalPlanner only supports batch operations via set_component_replicas.
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L246)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L247)
 
 <h4 id="api-dynamo-planner-connectors-global-planner-globalplannerconnector-remove-component">remove_component</h4>
 
@@ -713,7 +713,7 @@ Remove a component (not supported for GlobalPlanner).
 
 GlobalPlanner only supports batch operations via set_component_replicas.
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L259)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L260)
 
 <h4 id="api-dynamo-planner-connectors-global-planner-globalplannerconnector-validate-deployment">validate_deployment</h4>
 
@@ -726,7 +726,7 @@ Validate deployment (no-op for GlobalPlanner).
 The GlobalPlanner validates the deployment on its side, so local
 validation is not needed in delegating mode.
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L272)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L273)
 
 <h4 id="api-dynamo-planner-connectors-global-planner-globalplannerconnector-wait-for-deployment-ready">wait_for_deployment_ready</h4>
 
@@ -749,7 +749,7 @@ KubernetesConnector. If no local connector is available (e.g.
 running outside a cluster), fall back to the previous no-op so
 out-of-cluster callers are not blocked.
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L290)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L291)
 
 <h4 id="api-dynamo-planner-connectors-global-planner-globalplannerconnector-get-actual-worker-counts">get_actual_worker_counts</h4>
 
@@ -768,7 +768,22 @@ Returns ``(0, 0, True)`` when no local KubernetesConnector is available
 (e.g. running out-of-cluster), matching the existing capability-discovery
 fallback path so out-of-cluster callers aren't blocked.
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L346)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L347)
+
+<h4 id="api-dynamo-planner-connectors-global-planner-globalplannerconnector-get-worker-inventory">get_worker_inventory</h4>
+
+```python
+get_worker_inventory(prefill_component_name: Optional[str] = None, decode_component_name: Optional[str] = None) -> Optional[WorkerCounts]
+```
+
+Read serving and pending startup inventory from the pool's own DGD.
+
+Mirrors ``get_actual_worker_counts``: delegate to the pool-local
+KubernetesConnector so startup can proceed while extra replicas wait
+for capacity. Returns ``None`` out of cluster or on a Pod-list 403 so
+callers fall back to ``get_actual_worker_counts``.
+
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L380)
 
 <h4 id="api-dynamo-planner-connectors-global-planner-globalplannerconnector-get-worker-runtime-namespace">get_worker_runtime_namespace</h4>
 
@@ -778,7 +793,7 @@ get_worker_runtime_namespace(base_dynamo_namespace: str) -> str
 
 Resolve the pool-local worker runtime namespace when available.
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L379)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L405)
 
 <h4 id="api-dynamo-planner-connectors-global-planner-globalplannerconnector-get-gpu-counts">get_gpu_counts</h4>
 
@@ -788,7 +803,7 @@ get_gpu_counts(require_prefill: bool = True, require_decode: bool = True) -> tup
 
 Resolve pool-local per-engine GPU widths when available.
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L386)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L412)
 
 <h4 id="api-dynamo-planner-connectors-global-planner-globalplannerconnector-get-gpu-shapes">get_gpu_shapes</h4>
 
@@ -798,7 +813,7 @@ get_gpu_shapes(require_prefill: bool = True, require_decode: bool = True) -> tup
 
 Resolve pool-local GPU shapes when available.
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L400)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L426)
 
 <h4 id="api-dynamo-planner-connectors-global-planner-globalplannerconnector-get-worker-info">get_worker_info</h4>
 
@@ -814,7 +829,7 @@ and ``max_kv_tokens`` unset, and load_scaling's easy-mode decisions
 bail out every tick — so the pool Planner silently sends no
 ScaleRequests.
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L414)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L440)
 
 <h4 id="api-dynamo-planner-connectors-global-planner-globalplannerconnector-get-model-name">get_model_name</h4>
 
@@ -829,7 +844,7 @@ container args (via the local KubernetesConnector), and finally
 falls back to a placeholder indicating the model is managed
 remotely.
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L432)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/global_planner.py#L458)
 </Accordion>
 
 <Accordion id="api-dynamo-planner-connectors-kubernetes-kubernetesconnector" title="KubernetesConnector (class)">
@@ -940,7 +955,7 @@ Kubernetes-local and must not expand that ABC. The environment checks
 ``is_power_aware_connector(controller)`` (all four methods present)
 rather than duck-typing via ``getattr``.
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/kubernetes.py#L394)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/kubernetes.py#L392)
 
 <h4 id="api-dynamo-planner-connectors-kubernetes-kubernetesconnector-get-gpu-counts">get_gpu_counts</h4>
 
@@ -950,7 +965,7 @@ get_gpu_counts(require_prefill: bool = True, require_decode: bool = True, deploy
 
 Get per-engine GPU counts for prefill and decode components.
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/kubernetes.py#L404)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/kubernetes.py#L402)
 
 <h4 id="api-dynamo-planner-connectors-kubernetes-kubernetesconnector-get-gpu-shapes">get_gpu_shapes</h4>
 
@@ -963,7 +978,7 @@ Get per-engine performance width and per-replica GPU cost.
 Pass ``deployment`` to reuse an already-fetched DGD (avoids a second
 GET when the environment also resolves power configs on the same tick).
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/kubernetes.py#L428)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/kubernetes.py#L426)
 
 <h4 id="api-dynamo-planner-connectors-kubernetes-kubernetesconnector-get-component-power-configs">get_component_power_configs</h4>
 
@@ -983,7 +998,7 @@ The typed parser errors (``PowerAnnotationMissingError`` /
 propagate so the environment can apply the startup-fail vs
 runtime-conservative policy rather than the planner guessing a cap.
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/kubernetes.py#L514)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/kubernetes.py#L512)
 
 <h4 id="api-dynamo-planner-connectors-kubernetes-kubernetesconnector-get-frontend-metrics-url">get_frontend_metrics_url</h4>
 
@@ -1001,7 +1016,7 @@ http://&#123;dgd_name&#125;-&#123;component_name_lowercase&#125;:&#123;port&#125
 
 - `Optional[str]` — The metrics URL string, or None if no frontend component is found.
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/kubernetes.py#L544)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/kubernetes.py#L542)
 
 <h4 id="api-dynamo-planner-connectors-kubernetes-kubernetesconnector-wait-for-deployment-ready">wait_for_deployment_ready</h4>
 
@@ -1024,7 +1039,7 @@ readiness. This lets the planner read MDC from worker pods
 without waiting for itself to be marked ready in the DGD.
 </ParamField>
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/kubernetes.py#L566)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/kubernetes.py#L564)
 
 <h4 id="api-dynamo-planner-connectors-kubernetes-kubernetesconnector-wait-for-settled-graph-deployment">wait_for_settled_graph_deployment</h4>
 
@@ -1054,7 +1069,7 @@ have rolled onto that generation. Active rolling updates
 (``status.rollingUpdate.phase`` Pending/InProgress/Failed) also
 block settlement because old Pods still carry the previous cap.
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/kubernetes.py#L585)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/kubernetes.py#L583)
 
 <h4 id="api-dynamo-planner-connectors-kubernetes-kubernetesconnector-get-worker-info">get_worker_info</h4>
 
@@ -1073,7 +1088,7 @@ PREFILL or DECODE
 Backend framework name (for default fallback)
 </ParamField>
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/kubernetes.py#L825)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/kubernetes.py#L823)
 
 <h4 id="api-dynamo-planner-connectors-kubernetes-kubernetesconnector-get-worker-inventory">get_worker_inventory</h4>
 
@@ -1088,7 +1103,7 @@ the power-aware readiness guarantees. An omitted component name reports
 zero counts for that role; pending counts never include draining workers.
 Return None on a Pod-list 403 so callers can retain legacy behavior.
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/kubernetes.py#L988)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/kubernetes.py#L986)
 
 <h4 id="api-dynamo-planner-connectors-kubernetes-kubernetesconnector-get-actual-worker-counts">get_actual_worker_counts</h4>
 
@@ -1098,7 +1113,7 @@ get_actual_worker_counts(prefill_component_name: Optional[str] = None, decode_co
 
 Get worker counts without blocking the Planner event loop.
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/kubernetes.py#L1072)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/kubernetes.py#L1070)
 
 <h4 id="api-dynamo-planner-connectors-kubernetes-kubernetesconnector-get-power-aware-worker-counts">get_power_aware_worker_counts</h4>
 
@@ -1112,7 +1127,7 @@ One thread dispatch contains the synchronous DGD GET and the single
 DGD-scoped Pod LIST. The returned Pod snapshot is partitioned locally by
 component before terminating-Pod checks run.
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/kubernetes.py#L1097)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/kubernetes.py#L1095)
 
 <h4 id="api-dynamo-planner-connectors-kubernetes-kubernetesconnector-set-component-replicas">set_component_replicas</h4>
 
@@ -1122,7 +1137,7 @@ set_component_replicas(target_replicas: list[TargetReplica], blocking: bool = Tr
 
 Set the replicas for multiple components at once
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/kubernetes.py#L1210)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/kubernetes.py#L1208)
 
 <h4 id="api-dynamo-planner-connectors-kubernetes-kubernetesconnector-acquire-batch-writer-fence">acquire_batch_writer_fence</h4>
 
@@ -1138,7 +1153,7 @@ old process. This CAS annotation then orders any Scale PATCH already
 fetched by that old process: it either commits before the fence (and is
 visible to the refresh below) or conflicts afterward.
 
-[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/kubernetes.py#L1458)
+[source](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/connectors/kubernetes.py#L1456)
 </Accordion>
 
 <Accordion id="api-dynamo-planner-errors-modelnamenotfounderror" title="ModelNameNotFoundError (class)">
@@ -2222,7 +2237,7 @@ from dynamo.planner.simulation import create_provider
 create_provider() -> DynamoPlannerSweepConfigProvider
 ```
 
-[`components/src/dynamo/planner/simulation/provider.py#L1495`](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/simulation/provider.py#L1495)
+[`components/src/dynamo/planner/simulation/provider.py#L1492`](https://github.com/ai-dynamo/dynamo/blob/main/components/src/dynamo/planner/simulation/provider.py#L1492)
 </Accordion>
 
 <Accordion id="api-dynamo-planner-reconfiguration-live-retune-sla-errors" title="live_retune_sla_errors (function)">
